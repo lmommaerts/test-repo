@@ -1,0 +1,19 @@
+machine:
+  node:
+    version: 4.4.7
+dependencies:
+  pre:
+    - npm install -g npm@3.x.x
+deployment:
+  dev:
+    branch: [master, hotfix]
+    commands:
+      - ./deploy.sh
+  staging:
+    branch: [staging, hotfix]
+    commands:
+      - ./deploy.sh
+  prod:
+    branch: [prod, hotfix]
+    commands:
+      - ./deploy.sh
